@@ -12,7 +12,7 @@ class Auth0ActorProvider implements ActorProviderInterface
     public function getActor(TokenInterface $token): ?object
     {
         return new Auth0Actor(
-            id: $token->getPayload()['sub'],
+            id: (string)$token->getPayload()['sub'],
             accessToken: $token->getID(),
             payload: $token->getPayload(),
         );
