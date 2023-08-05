@@ -7,9 +7,7 @@
 [![Codecov](https://codecov.io/gh/sunxyw/spiral-auth0-bridge/branch/master/graph/badge.svg)](https://codecov.io/gh/sunxyw/spiral-auth0-bridge/)
 [![Total Downloads](https://poser.pugx.org/sunxyw/spiral-auth0-bridge/downloads)](https://packagist.org/sunxyw/spiral-auth0-bridge/phpunit)
 
-
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
 
 ## Requirements
 
@@ -37,6 +35,35 @@ protected const LOAD = [
 
 > Note: if you are using [`spiral-packages/discoverer`](https://github.com/spiral-packages/discoverer),
 > you don't need to register bootloader by yourself.
+
+## Usage
+
+Register the `\Sunxyw\SpiralAuth0Bridge\Security\Auth0TokenStorage` token storage via config or bootloader, you may find
+documentation [here](https://spiral.dev/docs/security-authentication/current/en#custom-token-storage).
+
+Then, register the actor provider `\Sunxyw\SpiralAuth0Bridge\Security\Auth0ActorProvider` via bootloader too,
+documentation may
+find [here](https://spiral.dev/docs/security-authentication/current/en#actor-provider-and-token-payload).
+
+> You may want to scroll down the documentation page to find the registration steps.
+
+Please remember to configure your AuthTransportMiddleware too, otherwise, Auth0 bridge will not able to retrieve the
+token. [Docs](https://spiral.dev/docs/security-authentication/current/en#usage-with-http-layer).
+
+After that, you can obtain the actor using `AuthContextInterface`.
+
+```php
+public function index(\Spiral\Auth\AuthContextInterface $auth)
+{
+    if ($auth->getActor() === null) {
+        throw new ForbiddenException();
+    }
+
+    dump($auth->getActor());
+}
+```
+
+The actor will be an instance of `\Sunxyw\SpiralAuth0Bridge\Security\Auth0Actor`.
 
 ## Testing
 
