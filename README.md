@@ -31,7 +31,7 @@ After package install you need to register bootloader from the package.
 ```php
 protected const LOAD = [
     // ...
-    \Sunxyw\SpiralAuth0Bridge\Bootloader\SpiralAuth0BridgeBootloader::class,
+    \Sunxyw\SpiralAuth0Bridge\Bootloader\Auth0BridgeBootloader::class,
 ];
 ```
 
