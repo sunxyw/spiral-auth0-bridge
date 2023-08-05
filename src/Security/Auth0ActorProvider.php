@@ -12,7 +12,8 @@ class Auth0ActorProvider implements ActorProviderInterface
     public function getActor(TokenInterface $token): ?object
     {
         return new Auth0Actor(
-            id: $token->getID(),
+            id: $token->getPayload()['sub'],
+            accessToken: $token->getID(),
             payload: $token->getPayload(),
         );
     }

@@ -10,6 +10,7 @@ class Auth0Actor implements ActorInterface
 {
     public function __construct(
         public readonly string $id,
+        public readonly string $accessToken,
         private readonly array $payload,
     )
     {
@@ -23,20 +24,5 @@ class Auth0Actor implements ActorInterface
     public function getPayload(): array
     {
         return $this->payload;
-    }
-
-    public function __get(string $name)
-    {
-        return $this->payload[$name];
-    }
-
-    public function __set(string $name, mixed $value): void
-    {
-        throw new \RuntimeException('Auth0Actor is immutable.');
-    }
-
-    public function __isset(string $name): bool
-    {
-        return isset($this->payload[$name]);
     }
 }
