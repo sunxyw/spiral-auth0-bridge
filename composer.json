@@ -1,22 +1,23 @@
 {
-  "name": ":vendor_slug/:package_slug",
-  "description": ":package_description",
+  "name": "sunxyw/spiral-auth0-bridge",
+  "description": "This is my package spiral-auth0-bridge",
   "keywords": [
-    ":vendor_name",
+    "sunxyw",
     "spiral",
-    ":package_slug"
+    "spiral-auth0-bridge"
   ],
-  "homepage": "https://github.com/:vendor_slug/:package_slug",
+  "homepage": "https://github.com/sunxyw/spiral-auth0-bridge",
   "license": "MIT",
   "authors": [
     {
-      "name": ":author_name",
-      "email": "author@domain.com",
+      "name": "Sunxyw",
+      "email": "dev@sunxyw.xyz",
       "role": "Developer"
     }
   ],
   "require": {
     "php": "^8.1",
+    "auth0/auth0-php": "^8.7",
     "spiral/boot": "^3.7",
     "spiral/console": "^3.7"
   },
@@ -28,13 +29,13 @@
   },
   "autoload": {
     "psr-4": {
-      "VendorName\\Skeleton\\": "src"
+      "Sunxyw\\SpiralAuth0Bridge\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "VendorName\\Skeleton\\Tests\\App\\": "tests/app",
-      "VendorName\\Skeleton\\Tests\\": "tests/src"
+      "Sunxyw\\SpiralAuth0Bridge\\Tests\\App\\": "tests/app",
+      "Sunxyw\\SpiralAuth0Bridge\\Tests\\": "tests/src"
     }
   },
   "scripts": {
@@ -42,12 +43,15 @@
     "psalm": "vendor/bin/psalm --config=psalm.xml ./src"
   },
   "config": {
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
   },
   "extra": {
     "spiral": {
       "bootloaders": [
-        "VendorName\\Skeleton\\Bootloader\\SkeletonBootloader"
+        "Sunxyw\\SpiralAuth0Bridge\\Bootloader\\SpiralAuth0BridgeBootloader"
       ]
     }
   },

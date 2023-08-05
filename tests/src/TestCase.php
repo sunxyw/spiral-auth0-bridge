@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Sunxyw\SpiralAuth0Bridge\Tests;
 
 class TestCase extends \Spiral\Testing\TestCase
 {
@@ -13,7 +13,7 @@ class TestCase extends \Spiral\Testing\TestCase
     {
         return [
             \Spiral\Boot\Bootloader\ConfigurationBootloader::class,
-            \VendorName\Skeleton\SkeletonBootloader::class,
+            \Sunxyw\SpiralAuth0Bridge\SpiralAuth0BridgeBootloader::class,
             // ...
         ];
     }

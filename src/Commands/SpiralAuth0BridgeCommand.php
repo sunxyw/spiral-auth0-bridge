@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace VendorName\Skeleton\Commands;
+namespace Sunxyw\SpiralAuth0Bridge\Commands;
 
 use Spiral\Console\Attribute\Argument;
 use Spiral\Console\Attribute\Option;
@@ -11,10 +11,10 @@ use Spiral\Console\Command;
 use Spiral\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputOption;
 
-#[AsCommand(name: 'skeleton', description: 'My command')]
-final class SkeletonCommand extends Command
+#[AsCommand(name: 'spiral-auth0-bridge', description: 'My command')]
+final class SpiralAuth0BridgeCommand extends Command
 {
-    protected const SIGNATURE = 'skeleton {argument : Argument description} {--o|option : Option description}';
+    protected const SIGNATURE = 'spiral-auth0-bridge {argument : Argument description} {--o|option : Option description}';
 
     #[Argument(description: 'Argument description')]
     #[Question(question: 'Provide argument')]

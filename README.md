@@ -1,20 +1,13 @@
-# :package_description
+# This is my package spiral-auth0-bridge
 
-[![PHP Version Require](https://poser.pugx.org/:vendor_slug/:package_slug/require/php)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![Latest Stable Version](https://poser.pugx.org/:vendor_slug/:package_slug/v/stable)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![phpunit](https://github.com/:vendor_slug/:package_slug/actions/workflows/phpunit.yml/badge.svg)](https://github.com/:vendor_slug/:package_slug/actions)
-[![psalm](https://github.com/:vendor_slug/:package_slug/actions/workflows/psalm.yml/badge.svg)](https://github.com/:vendor_slug/:package_slug/actions)
-[![Codecov](https://codecov.io/gh/:vendor_slug/:package_slug/branch/master/graph/badge.svg)](https://codecov.io/gh/:vendor_slug/:package_slug/)
-[![Total Downloads](https://poser.pugx.org/:vendor_slug/:package_slug/downloads)](https://packagist.org/:vendor_slug/:package_slug/phpunit)
+[![PHP Version Require](https://poser.pugx.org/sunxyw/spiral-auth0-bridge/require/php)](https://packagist.org/packages/sunxyw/spiral-auth0-bridge)
+[![Latest Stable Version](https://poser.pugx.org/sunxyw/spiral-auth0-bridge/v/stable)](https://packagist.org/packages/sunxyw/spiral-auth0-bridge)
+[![phpunit](https://github.com/sunxyw/spiral-auth0-bridge/actions/workflows/phpunit.yml/badge.svg)](https://github.com/sunxyw/spiral-auth0-bridge/actions)
+[![psalm](https://github.com/sunxyw/spiral-auth0-bridge/actions/workflows/psalm.yml/badge.svg)](https://github.com/sunxyw/spiral-auth0-bridge/actions)
+[![Codecov](https://codecov.io/gh/sunxyw/spiral-auth0-bridge/branch/master/graph/badge.svg)](https://codecov.io/gh/sunxyw/spiral-auth0-bridge/)
+[![Total Downloads](https://poser.pugx.org/sunxyw/spiral-auth0-bridge/downloads)](https://packagist.org/sunxyw/spiral-auth0-bridge/phpunit)
 
-<!--delete-->
----
-This repo can be used to scaffold a Spiral Framework package. Follow these steps to get started:
 
-1. Press the "Use template" button at the top of this repo to create a new repo with the contents of this skeleton.
-2. Run `php ./configure.php` to run a script that will replace all placeholders throughout all the files.
----
-<!--/delete-->
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
 
@@ -30,7 +23,7 @@ Make sure that your server is configured with following PHP version and extensio
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
+composer require sunxyw/spiral-auth0-bridge
 ```
 
 After package install you need to register bootloader from the package.
@@ -38,7 +31,7 @@ After package install you need to register bootloader from the package.
 ```php
 protected const LOAD = [
     // ...
-    \VendorName\Skeleton\Bootloader\SkeletonBootloader::class,
+    \Sunxyw\SpiralAuth0Bridge\Bootloader\SpiralAuth0BridgeBootloader::class,
 ];
 ```
 
@@ -65,7 +58,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Sunxyw](https://github.com/sunxyw)
 - [All Contributors](../../contributors)
 
 ## License
